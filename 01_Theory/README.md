@@ -21,19 +21,19 @@ This folder contains deep theoretical foundations for each week of the program.
 │   ├── Week_11_Feature_Engineering_Explainability_SHAP_LIME.ipynb
 │   └── Week_12_Backtesting_TransactionCosts_CrossValidation_RiskMetrics.ipynb
 ├── Advanced_Weeks_13-20/
-│   ├── Week_13_Deep_Learning_MLP_Regularization_Dropout.ipynb
-│   ├── Week_14_Sequence_Models_LSTM_GRU_Attention_Transformers.ipynb
-│   ├── Week_15_Reinforcement_Learning_MAB_QLearning_DQN_PPO.ipynb
-│   ├── Week_16_Options_Pricing_BlackScholes_Greeks_VolSurface_DeepHedging.ipynb
-│   ├── Week_17_Portfolio_Optimization_Markowitz_BlackLitterman_RiskParity.ipynb
-│   ├── Week_18_Alternative_Data_NLP_Sentiment_ESG_Embeddings.ipynb
-│   ├── Week_19_Bayesian_Methods_BMA_Kalman_GaussianProcesses.ipynb
-│   └── Week_20_Market_Microstructure_HFT_LOB_Execution_Algos.ipynb
+│   ├── Week_13_NeuralNetworks_MLP_PyTorch_Keras.ipynb
+│   ├── Week_14_RNN_LSTM_GRU_Sequences.ipynb
+│   ├── Week_15_Attention_Transformers_Finance.ipynb
+│   ├── Week_16_ReinforcementLearning_DQN_PolicyGradient.ipynb
+│   ├── Week_17_NLP_Sentiment_EventDriven.ipynb
+│   ├── Week_18_AlternativeData_Satellite_Scraping.ipynb
+│   ├── Week_19_PortfolioConstruction_MeanVariance_RiskParity.ipynb
+│   └── Week_20_Execution_MarketMicrostructure_AlgrenChriss.ipynb
 ├── Production_Weeks_21-24/
-│   ├── Week_21_System_Design_Architecture_Latency_Scalability.ipynb
-│   ├── Week_22_Real_Time_Pipelines_Streaming_EventDriven.ipynb
-│   ├── Week_23_Production_ML_AlphaDecay_Monitoring_OnlineLearning_ABTesting.ipynb
-│   └── Week_24_Capstone_Integration_Documentation_Deployment.ipynb
+│   ├── Week_21_MLOps_Deployment_Monitoring.ipynb
+│   ├── Week_22_RiskManagement_VaR_CVaR_StressTesting.ipynb
+│   ├── Week_23_Regulation_Compliance_ModelRisk.ipynb
+│   └── Week_24_Capstone_FullPipeline_Integration.ipynb
 └── References_Resources_Papers.md
 ```
 
