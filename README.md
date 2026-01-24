@@ -1,3 +1,189 @@
+Execute a comprehensive audit and enhancement of a quantitative trading curriculum (Weeks 1-24):
+
+PHASE 1 - Completeness Verification:
+- Cross-reference README to identify required notebooks for each week
+- Verify all days (Day 1-7) have corresponding notebooks for Weeks 1-24
+- Check for missing notebooks, incomplete days, or placeholder files
+- Document notebook inventory:
+  * Expected notebooks per week (from README)
+  * Actual notebooks present
+  * Missing/incomplete notebooks with gap analysis
+- Validate file naming conventions match README specifications
+- Ensure theory and trading strategy files exist as documented
+
+PHASE 2 - Sequential Markdown & Code Audit (Week 1 Day 1 → Week 24 Day 7):
+EXECUTION ORDER: Process strictly in sequence: Week 1 Day 1, Day 2, Day 3...Day 7, then Week 2 Day 1...continuing through Week 24 Day 7
+
+For EACH notebook in sequence:
+
+A. MARKDOWN ANALYSIS:
+   - Extract teaching methodology and concept explanations
+   - Document key concepts, formulas, and trading principles
+   - Verify markdown cells are clear, complete, and practitioner-focused
+   - Check for missing explanations or incomplete documentation
+   - Ensure examples and use cases are included
+
+B. CODE VALIDATION & EXECUTION:
+   - Execute notebook with robust kernel management:
+     * Start notebook execution
+     * Wait 10 seconds for kernel initialization
+     * If kernel is unresponsive or crashed:
+       → Restart kernel immediately
+       → Wait 15 seconds for kernel to stabilize
+       → Clear all variables and reload libraries
+       → Retry execution from beginning
+     * Maximum 3 kernel restart attempts per notebook
+     * Log each restart event with timestamp and reason
+   
+   - Execute cell-by-cell with error tracking:
+     * Run each cell sequentially
+     * Wait 5 seconds between cells for stability
+     * If cell hangs (>60 seconds), interrupt and log
+     * If cell errors, categorize error type:
+       → Data fetching (API, network)
+       → Calculation (math, NaN, division)
+       → Import/dependency issues
+       → Trading logic bugs
+     * Fix errors immediately from quantitative trading perspective
+     * Re-run cell after fix to verify resolution
+   
+   - Verify outputs:
+     * Check all visualizations render correctly
+     * Validate calculated metrics are reasonable
+     * Ensure trading signals are generated (if applicable)
+     * Confirm data quality and completeness
+
+C. QUALITY CHECKS:
+   - Code follows Python best practices (PEP 8, documentation)
+   - Proper error handling and data validation
+   - Clear variable names and comments
+   - Modular, reusable functions
+   - No hardcoded values that should be parameters
+
+D. PROGRESS LOGGING:
+   - Log completion of each notebook: "✓ Week X Day Y - [Concept Name] - Status: PASSED/FAILED"
+   - Track cumulative statistics:
+     * Notebooks processed: X/168 (24 weeks × 7 days)
+     * Kernel restarts: X (target: <10%)
+     * Errors fixed: X
+     * Execution time: X minutes
+   - Generate checkpoint after each week completion
+
+PHASE 3 - Trading Strategy Validation (Weeks 13-24):
+After sequential execution completes, verify trading strategy files:
+- Confirm yfinance integration in all trading strategy notebooks
+- Verify actionable signals (BUY/SELL/HOLD/PUT/CALL) for 5 stocks: AAPL, GOOGL, MSFT, GS, JPM
+- Check global stock compatibility and signal generation logic
+- Ensure strategy files produce:
+  * Clear entry/exit signals with timestamps
+  * Position sizing recommendations
+  * Risk metrics (stop-loss, take-profit levels)
+  * Performance statistics (returns, Sharpe, drawdown)
+
+PHASE 4 - Ticker Flexibility Testing (Weeks 13-24):
+- Replace GOOGL with NVDA in all trading strategy notebooks
+- Re-execute each notebook with new ticker:
+  * Apply same kernel restart protocol (10 sec wait, max 3 restarts)
+  * Verify zero errors from ticker substitution
+  * Confirm signals still generate correctly
+  * Check data fetching works for new ticker
+- Test parameterization quality:
+  * Ticker should be configurable in one location
+  * No hardcoded ticker references in code
+  * Strategy logic ticker-agnostic
+
+PHASE 5 - Concept Coverage & Gap Analysis:
+- Cross-reference README against completed curriculum
+- Document all concepts covered (week/day/topic)
+- Identify missing concepts for Quant Trading ML Associate roles:
+  * Options pricing models (Black-Scholes, binomial trees, Greeks)
+  * Portfolio optimization (Markowitz, Kelly Criterion, risk parity)
+  * Risk metrics (VaR, CVaR, Sharpe ratio, max drawdown)
+  * Backtesting frameworks (vectorized backtesting, walk-forward analysis)
+  * ML model validation (cross-validation, overfitting prevention, feature importance)
+  * Market microstructure (order types, execution algorithms, slippage modeling)
+- Assess industry best practices compliance:
+  * Transaction costs and slippage incorporation
+  * Position sizing and risk management rules
+  * Data quality checks and outlier handling
+  * Reproducibility and random seed management
+  * Documentation and code commenting standards
+
+EXECUTION RESILIENCE PROTOCOL:
+- Kernel restart handling:
+  * Initial wait: 10 seconds after notebook start
+  * Restart wait: 15 seconds after kernel restart
+  * Inter-cell wait: 5 seconds between cells
+  * Maximum restarts: 3 attempts per notebook
+  * After 3 failed restarts: log as CRITICAL, document diagnostics, skip to next notebook
+- Timeout management:
+  * Cell timeout: 60 seconds
+  * Notebook timeout: 10 minutes
+  * If timeout exceeded: interrupt, log, attempt recovery
+- Memory management:
+  * Monitor memory usage per notebook
+  * Clear large objects after use
+  * Restart kernel if memory leak detected (>80% RAM usage)
+- Error recovery:
+  * Fix errors inline during execution
+  * Re-run failed cells after fix
+  * Document all fixes in error log
+  * Continue sequential execution after recovery
+
+DELIVERABLES:
+1. Sequential Execution Report:
+   - Notebook-by-notebook results (Week 1 Day 1 → Week 24 Day 7)
+   - Status for each: ✓ PASSED / ⚠ PASSED WITH FIXES / ✗ FAILED
+   - Execution statistics (time, restarts, errors per notebook)
+   
+2. Curriculum Completeness Report:
+   - Week-by-week inventory (expected vs actual notebooks)
+   - Missing notebooks list with priority levels
+   - Structural integrity assessment
+   
+3. Markdown Quality Report:
+   - Concept coverage matrix (week/day/topic/learning_objective)
+   - Documentation quality scores
+   - Missing or incomplete explanations
+   
+4. Code Quality Report:
+   - Errors found and fixed (categorized by type)
+   - Kernel restart log with timestamps
+   - Performance issues and optimizations
+   - Code quality compliance (best practices adherence)
+   
+5. Trading Strategy Assessment:
+   - Stock-specific signals for all 5 tickers (AAPL, GOOGL, MSFT, GS, JPM)
+   - Performance metrics (returns, Sharpe, max drawdown)
+   - Risk assessment and position recommendations
+   - Industry best practices compliance score
+   
+6. Ticker Flexibility Validation:
+   - GOOGL→NVDA substitution test results
+   - Parameterization quality assessment
+   - Errors encountered and fixes applied
+   
+7. Professional README Update:
+   - Complete curriculum map with week-by-week breakdown
+   - Completeness status for all weeks (✓ complete, ⚠ partial, ✗ missing)
+   - Covered vs missing concepts gap analysis
+   - Real-world deployment readiness assessment
+   - Prerequisites and learning path
+   - Open-source contribution guidelines
+   - Setup instructions and dependencies
+   - Execution statistics and quality metrics
+
+QUALITY CRITERIA:
+- Sequential execution: Week 1 Day 1 → Week 24 Day 7 without skipping
+- All notebooks execute cleanly with proper kernel management
+- Kernel restart rate < 10% of total executions (target: <17 restarts out of 168 notebooks)
+- Zero persistent errors after fixes applied
+- All markdown cells clearly explain concepts from practitioner perspective
+- Trading strategies use industry-standard practices
+- Code is production-grade: modular, documented, error-handled, ticker-agnostic
+- 100% curriculum completeness (all weeks have Day 1-7 as per README)
+- Documentation suitable for job preparation, portfolio building, and open-source learning
+- Ticker substitution works flawlessly with zero manual intervention
 # ML-Quant-Finance-Mastery
 
 ## 🎯 Land Quant Trader/Researcher Roles at Top-Tier Firms

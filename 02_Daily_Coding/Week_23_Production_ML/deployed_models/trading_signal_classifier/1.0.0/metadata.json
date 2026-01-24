@@ -1,0 +1,33 @@
+{
+  "model_name": "trading_signal_classifier",
+  "version": "1.0.0",
+  "created_at": "2026-01-24T02:15:17.161911",
+  "model_type": "Pipeline",
+  "feature_names": [
+    "returns",
+    "volatility_20",
+    "momentum_10",
+    "momentum_20",
+    "rsi",
+    "volume_ratio",
+    "ma_crossover",
+    "spread",
+    "hour",
+    "day_of_week"
+  ],
+  "target_name": "target",
+  "training_metrics": {
+    "accuracy": 0.504,
+    "precision": 0.468,
+    "recall": 0.24375,
+    "f1_score": 0.32054794520547947
+  },
+  "hyperparameters": {
+    "n_estimators": 100,
+    "max_depth": 10,
+    "min_samples_split": 20
+  },
+  "checksum": "e34d8bc09532bf5dbe3fa75328a58028a2666acfb3c7d766dd6421fcbe349a4e",
+  "description": "Random Forest classifier for trading signal prediction",
+  "author": "Quant Team"
+}
